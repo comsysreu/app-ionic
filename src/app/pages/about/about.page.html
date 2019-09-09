@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Usuarios </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="bg-profile" text-center padding>
+    <img src="assets/img/ionic4start-ico.png">
+  </div> -->
+
+  <!-- <ion-card class="bg-white" no-margin>
+    <ion-card-content>
+      <h1 margin-bottom>
+        <ion-text color="primary"><strong>Ionic 4 Start Theme Application</strong></ion-text>
+      </h1>
+
+      <p margin-bottom>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum odio placeat incidunt nesciunt atque ratione
+        quisquam, fugit omnis maxime adipisci excepturi dignissimos aliquam asperiores itaque unde sequi? Minus, quia,
+        dolore?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum odio placeat incidunt nesciunt atque ratione
+        quisquam, fugit omnis maxime adipisci excepturi dignissimos aliquam asperiores itaque unde sequi? Minus, quia,
+        dolore?
+      </p>
+    </ion-card-content> 
+  </ion-card> -->
+
+  <ion-list no-padding no-margin>
+    <!-- <ion-list-header color="dark">
+      <ion-label class="fw700">Notifications</ion-label>
+    </ion-list-header> -->
+
+    <!-- <ion-item color="primary" class="text-10" *ngFor="let item of items">
+        <ion-icon name="mail" color="light"></ion-icon>
+        <ion-label>New Offer 25% OFF</ion-label>
+      </ion-item> -->
+
+    <ion-card *ngFor="let item of items">
+      <ion-card-header>
+        <ion-card-subtitle> {{ item.position == '1' ? 'Administrador' : 'Usuario final' }} </ion-card-subtitle>
+        <ion-card-title> {{item.name}} </ion-card-title>
+        <ion-card-content>
+          {{ item.user }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ item.creationDate | date:'medium' }}
+        </ion-card-content>
+      </ion-card-header>
+    </ion-card>
+
+    <!-- <ion-item color="light" class="text-10">
+        <ion-icon name="mail-open" color="primary"></ion-icon>
+        <ion-label>New Offer 10% OFF by month!</ion-label>
+      </ion-item> -->
+
+    <!-- <ion-item color="primary" class="text-10">
+        <ion-icon name="mail" color="light"></ion-icon>
+        <ion-label>New Offer 35% OFF</ion-label>
+      </ion-item> -->
+
+  </ion-list>
+
+</ion-content>

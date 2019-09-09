@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Bandeja de Entrada </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-padding no-margin>
+
+    <ion-card *ngFor="let item of items">
+      <ion-card-header>
+        <ion-card-subtitle> {{ item.creationDate | date:'medium' }} </ion-card-subtitle>
+        <ion-card-title> {{item.name}} </ion-card-title>
+        <ion-card-content>
+          {{ item.phone }}
+          {{ item.email }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ item.message }}
+        </ion-card-content>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>
